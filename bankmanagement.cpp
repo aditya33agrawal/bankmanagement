@@ -59,8 +59,6 @@ void account::modify()
 	cout<<"\nModify Type of Account : ";
 	cin>>type;
 	type=toupper(type);
-	cout<<"\nModify Balance amount : ";
-	cin>>deposit;
 }
 
 	
@@ -119,19 +117,17 @@ int main()
 	intro();
 	do
 	{
-		system("cls");
-		cout<<"\n\n\n\tMAIN MENU";
-		cout<<"\n\n\t01. NEW ACCOUNT";
-		cout<<"\n\n\t02. DEPOSIT AMOUNT";
-		cout<<"\n\n\t03. WITHDRAW AMOUNT";
-		cout<<"\n\n\t04. BALANCE ENQUIRY";
-		cout<<"\n\n\t05. ALL ACCOUNT HOLDER LIST";
-		cout<<"\n\n\t06. CLOSE AN ACCOUNT";
-		cout<<"\n\n\t07. MODIFY AN ACCOUNT";
-		cout<<"\n\n\t08. EXIT";
-		cout<<"\n\n\tSelect Your Option (1-8) ";
+		cout<<"\nMAIN MENU:\n" << endl;
+		cout<<"1).NEW ACCOUNT" << endl;
+		cout<<"2).DEPOSIT AMOUNT" << endl;
+		cout<<"3).WITHDRAW AMOUNT" << endl;
+		cout<<"4).BALANCE ENQUIRY" << endl;
+		cout<<"5).ALL ACCOUNT HOLDER LIST" << endl;
+		cout<<"6).CLOSE AN ACCOUNT" << endl;
+		cout<<"7).MODIFY AN ACCOUNT" << endl;
+		cout<<"8).EXIT\n" << endl;
+		cout<<"Select Your Option (1-8):" << endl;
 		cin>>ch;
-		system("cls");
 		switch(ch)
 		{
 		case '1':
@@ -300,7 +296,7 @@ void display_all()
 	}
 	cout<<"\n\n\t\tACCOUNT HOLDER LIST\n\n";
 	cout<<"====================================================\n";
-	cout<<"A/c no.      NAME           Type  Balance\n";
+	cout<<"A/c no.      NAME           Type     Balance\n";
 	cout<<"====================================================\n";
 	while(inFile.read(reinterpret_cast<char *> (&ac), sizeof(account)))
 	{
@@ -369,10 +365,5 @@ void deposit_withdraw(int n, int option)
 
 void intro()
 {
-	cout<<"\n\n\n\t  BANK";
-	cout<<"\n\n\tMANAGEMENT";
-	cout<<"\n\n\t  SYSTEM";
-	cout<<"\n\n\n\nMADE BY : your name";
-	cout<<"\n\nSCHOOL : your school name";
-	cin.get();
+	cout<<"\nBANK MANAGEMENT SYSTEM" << endl;
 }
